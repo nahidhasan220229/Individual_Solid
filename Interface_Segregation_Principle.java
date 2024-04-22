@@ -1,3 +1,8 @@
+//*************************************************************************
+// TITLE : A JAVA PROGRAMME TO DEMOSTRATE INTERFACE DEGRAGATION PRINCIPLE
+// AUTHOR : NAHID HASAN , UNDERGRADUATE STUDENT (2ND YEAR) OF KHULNA UNIVERSITY
+//*************************************************************************
+
 /**
  * Summary of the following code
  
