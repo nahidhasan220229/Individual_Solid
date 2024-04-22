@@ -1,4 +1,22 @@
 /**
+
+ ** Summary of the following code
+ 
+ * In this example, both SavingsAccount and CheckingAccount implement the BankAccount interface. 
+   According to the Liskov Substitution Principle, 
+   we should be able to use a SavingsAccount wherever a BankAccount is expected, 
+   and vice versa, without altering the behavior of the program.
+
+ * Each account type implements the common operations defined in the BankAccount interface (getBalance(),
+   deposit(), withdraw()), but they can have their own specific implementation details,
+   such as overdraft protection for a checking account or interest calculation for a savings account. 
+   Despite these differences, the behavior of the program remains consistent when using either 
+   type of account, adhering to the Liskov Substitution Principle. 
+   
+   */
+
+
+/**
  * Interface representing a bank account.
  */
 interface BankAccount {
@@ -90,16 +108,3 @@ public class Liskov_Substitution_Principle {
 }
 
 
-/**
- * In this example, both SavingsAccount and CheckingAccount implement the BankAccount interface. 
-   According to the Liskov Substitution Principle, 
-   we should be able to use a SavingsAccount wherever a BankAccount is expected, 
-   and vice versa, without altering the behavior of the program.
-
- * Each account type implements the common operations defined in the BankAccount interface (getBalance(),
-   deposit(), withdraw()), but they can have their own specific implementation details,
-   such as overdraft protection for a checking account or interest calculation for a savings account. 
-   Despite these differences, the behavior of the program remains consistent when using either 
-   type of account, adhering to the Liskov Substitution Principle. 
-   
-   */
