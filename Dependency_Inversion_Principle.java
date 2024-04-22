@@ -1,4 +1,24 @@
 /**
+
+ * Summary of the code
+ * In this example:
+
+ * BankAccount is the high-level abstraction representing a bank account.
+ * SavingsAccount and CheckingAccount are low-level concrete implementations of bank accounts.
+ * TransactionProcessor is the high-level module responsible for transaction processing, 
+   which depends on the abstraction BankAccount.
+ * Concrete implementations (SavingsAccount and CheckingAccount) depend on the abstraction BankAccount.
+
+ * By depending on the BankAccount interface, the TransactionProcessor class is decoupled 
+   from specific account types, allowing it to work with any type of bank account. 
+   This promotes flexibility, maintainability, and extensibility in the system, 
+   adhering to the Dependency Inversion Principle.
+
+ */
+
+
+
+/**
  * Interface representing a bank account.
  */
 interface BankAccount {
@@ -102,18 +122,3 @@ public class Dependency_Inversion_Principle {
     }
 }
 
-/**
- * In this example:
-
- * BankAccount is the high-level abstraction representing a bank account.
- * SavingsAccount and CheckingAccount are low-level concrete implementations of bank accounts.
- * TransactionProcessor is the high-level module responsible for transaction processing, 
-   which depends on the abstraction BankAccount.
- * Concrete implementations (SavingsAccount and CheckingAccount) depend on the abstraction BankAccount.
-
- * By depending on the BankAccount interface, the TransactionProcessor class is decoupled 
-   from specific account types, allowing it to work with any type of bank account. 
-   This promotes flexibility, maintainability, and extensibility in the system, 
-   adhering to the Dependency Inversion Principle.
-
- */
