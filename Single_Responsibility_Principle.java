@@ -1,7 +1,14 @@
 //*************************************************************************
 // TITLE : A JAVA PROGRAMME TO DEMOSTRATE SINGLE RESPONSIBILITY PRINCIPLE .
-// AUTHOR : MOZAZA AL , UNDERGRADUATE STUDENT (2ND YEAR) Of KHULNA UNIVERSITY
+// AUTHOR : NAHID HASAN , UNDERGRADUATE STUDENT (2ND YEAR) Of KHULNA UNIVERSITY
 //*************************************************************************
+
+/**
+ * Summary of the following code
+ * In the examle every class like Book, BookPrinter has his own job. 
+ * They have not too much work.
+ Actually, in this code I have tried to give a single responsibility in each class.
+ This is the main motto of Single Responsibility Principle (SRP).
 
 /**
  * Represents a Book entity with properties and methods to manage its details.
