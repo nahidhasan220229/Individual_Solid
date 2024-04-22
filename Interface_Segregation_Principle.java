@@ -1,4 +1,18 @@
 /**
+ * Summary of the following code
+ 
+ * In this example, SavingsAccount implements only the Deposit interface because it 
+   only supports deposit operations. CurrentAccount, on the other hand, implements 
+   both the Deposit and Withdraw interfaces as it supports both deposit and withdrawal operations.
+
+ * By segregating the interfaces into smaller, more specific ones, we ensure that each class
+   only needs to implement the methods relevant to its functionality, adhering to the 
+   Interface Segregation Principle.
+ 
+ */
+
+
+/**
  * Interface representing a deposit operation.
  */
 interface Deposit {
@@ -72,13 +86,3 @@ public class Interface_Segregation_Principle {
     }
 }
 
-/**
- * In this example, SavingsAccount implements only the Deposit interface because it 
-   only supports deposit operations. CurrentAccount, on the other hand, implements 
-   both the Deposit and Withdraw interfaces as it supports both deposit and withdrawal operations.
-
- * By segregating the interfaces into smaller, more specific ones, we ensure that each class
-   only needs to implement the methods relevant to its functionality, adhering to the 
-   Interface Segregation Principle.
- 
- */
