@@ -1,4 +1,21 @@
 /**
+
+ ** Summary of the following code
+
+ * In this example, the Account interface defines a common method getBalance() 
+   for getting the balance of different types of bank accounts. 
+   Both SavingsAccount and CurrentAccount classes implement this interface 
+   and provide their own implementations of the getBalance() method.
+
+* The AccountBalanceCalculator class adheres to the Open/Closed Principle 
+  by accepting an array of Account objects and calculating 
+  the total balance without needing to modify its code 
+  when new account types are introduced. This allows for easy extension 
+  of the functionality without modifying existing code.
+
+*/
+
+/**
  * Interface representing a bank account.
  */
 interface Account {
@@ -87,16 +104,3 @@ public class Open_Closed_Principle {
     }
 }
 
-/**
- * In this example, the Account interface defines a common method getBalance() 
-   for getting the balance of different types of bank accounts. 
-   Both SavingsAccount and CurrentAccount classes implement this interface 
-   and provide their own implementations of the getBalance() method.
-
-* The AccountBalanceCalculator class adheres to the Open/Closed Principle 
-  by accepting an array of Account objects and calculating 
-  the total balance without needing to modify its code 
-  when new account types are introduced. This allows for easy extension 
-  of the functionality without modifying existing code.
-
-*/
