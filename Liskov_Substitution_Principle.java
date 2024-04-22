@@ -1,3 +1,8 @@
+//*************************************************************************
+// TITLE : A JAVA PROGRAMME TO DEMOSTRATE LISKOV SUBSTITUTION PRINCIPLE
+// AUTHOR : NAHID HASAN , UNDERGRADUATE STUDENT (2ND YEAR) Of KHULNA UNIVERSITY
+//*************************************************************************
+
 /**
 
  ** Summary of the following code
