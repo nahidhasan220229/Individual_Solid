@@ -1,91 +1,83 @@
 //*************************************************************************
-// Title : A java programme to demonstrate Single Responsibility Principle.
-// Author : Nahid Hasan,Student ID: 220229, Undergrduate student, Khulna University.
+// TITLE : A JAVA PROGRAMME TO DEMOSTRATE SINGLE RESPONSIBILITY PRINCIPLE .
+// AUTHOR : MOZAZA AL , UNDERGRADUATE STUDENT (2ND YEAR) Of KHULNA UNIVERSITY
 //*************************************************************************
-/**
 
 /**
- * This class represents a BankAccount entity with a single responsibility of managing account balance.
+ * Represents a Book entity with properties and methods to manage its details.
  */
-class BankAccount {
-    
-    private double balance;
+class Book {
+    private String title;
+    private String author;
+    private int pages;
 
     /**
-     * Constructs a BankAccount object with an initial balance.
+     * Constructs a new Book with the given title, author, and number of pages.
      * 
-     * @param initialBalance the initial balance of the account
+     * @param title  the title of the book
+     * @param author the author of the book
+     * @param pages  the number of pages in the book
      */
-    public BankAccount(double initialBalance) {
-        this.balance = initialBalance;
+    public Book(String title, String author, int pages) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
     }
 
     /**
-     * Gets the current balance of the account.
+     * Returns the title of the book.
      * 
-     * @return the current balance of the account
+     * @return the title of the book
      */
-    public double getBalance() {
-        return balance;
+    public String getTitle() {
+        return title;
     }
 
     /**
-     * Deposits the specified amount into the account.
+     * Returns the author of the book.
      * 
-     * @param amount the amount to deposit
+     * @return the author of the book
      */
-    public void deposit(double amount) {
-        if (amount > 0) {
-            balance += amount;
-            System.out.println("Deposit of " + amount + " successful. Current balance: " + balance);
-        } else {
-            System.out.println("Invalid deposit amount.");
-        }
+    public String getAuthor() {
+        return author;
     }
 
     /**
-     * Withdraws the specified amount from the account.
+     * Returns the number of pages in the book.
      * 
-     * @param amount the amount to withdraw
+     * @return the number of pages in the book
      */
-    public void withdraw(double amount) {
-        if (amount > 0 && amount <= balance) {
-            balance -= amount;
-            System.out.println("Withdrawal of " + amount + " successful. Current balance: " + balance);
-        } else {
-            System.out.println("Insufficient funds or invalid withdrawal amount.");
-        }
+    public int getPages() {
+        return pages;
     }
 }
 
 /**
- * Main class to demonstrate the usage of the BankAccount class.
+ * Represents a BookPrinter responsible for printing book details.
  */
-class Single_Responsibility_Principle {
+class BookPrinter {
+    /**
+     * Prints the details of the given book.
+     * 
+     * @param book the book to print
+     */
+    public void print(Book book) {
+        System.out.println("Title: " + book.getTitle());
+        System.out.println("Author: " + book.getAuthor());
+        System.out.println("Pages: " + book.getPages());
+    }
+}
 
+/**
+ * Main class to demonstrate the Single Responsibility Principle.
+ */
+public class SRPExample {
     public static void main(String[] args) {
-        // Create a new bank account with an initial balance of $1000
-        BankAccount account = new BankAccount(1000);
+        // Create a book
+        Book book = new Book("Clean Code", "Robert C. Martin", 464);
 
-        // Display initial balance
-        System.out.println("Initial balance: " + account.getBalance());
-
-        // Deposit $500 into the account
-        account.deposit(500);
-
-        // Withdraw $200 from the account
-        account.withdraw(200);
-
-        // Withdraw $1500 from the account (should fail due to insufficient funds)
-        account.withdraw(1500);
-
-        // Display final balance
-        System.out.println("Final balance: " + account.getBalance());
+        // Print the book details
+        BookPrinter bookPrinter = new BookPrinter();
+        bookPrinter.print(book);
     }
 }
-
-
-/**
- * In this example, every class has only one responsibility. This is the main motto of 
-   Single Responsibility Principle.
- */
